@@ -21,14 +21,14 @@ layout2=[[sg.Text('Ievadi nopirkto sēklu skaitu:',key='-OUTPUT2-')],
 [sg.Text('Tomāti\t'),sg.Input(key='v2')],
 [sg.Text('Burkāni\t'),sg.Input(key='v3')],
 [sg.Text('Paprika\t'),sg.Input(key='v4')],
-[sg.Button('Summa2'),sg.Button('Atcelt'),sg.Text(size=(15,1))]]
+[sg.Button('Summa2'),sg.Button('Atcelt2'),sg.Text(size=(15,1))]]
 
 layout3=[[sg.Text('Ievadi sagrauzto sēklu skaitu:', key='-OUTPUT3-')],
 [sg.Text('Gurķi\t'),sg.Input(key='s1')],
 [sg.Text('Tomāti\t'),sg.Input(key='s2')],
 [sg.Text('Burkāni\t'),sg.Input(key='s3')],
 [sg.Text('Paprika\t'),sg.Input(key='s4')],
-[sg.Button('Summa3'),sg.Button('Atcelt'),sg.Text(size=(15,1))]]
+[sg.Button('Summa3'),sg.Button('Atcelt3'),sg.Text(size=(15,1))]]
 
 tabgrp = [[sg.TabGroup([[sg.Tab('Mājas', layout,tooltip='tip'), sg.Tab('Veikala', layout2,tooltip='tip2'),sg.Tab('Sagrauztās', layout3,tooltip='tip3')]])]]
 
@@ -37,7 +37,7 @@ window = sg.Window(' Sēklas', tabgrp)
 while True:  
     event, values = window.read()
     print(event, values)
-    if event == sg.WIN_CLOSED or event == 'Atcelt':
+    if event == sg.WIN_CLOSED or event == 'Atcelt'or event == 'Atcelt2'or event == 'Atcelt3':
         break
       
     if event=='Summa':
